@@ -12,7 +12,7 @@
 ## 二.效果截图<br>
 ![](http://source.doudoucat.com/任务组.png)
 ![](http://source.doudoucat.com/任务列表.png)
-![](http://source.doudoucat.com/任务执行.png)
+
 ## 三.说明与结语<br>
 springboot动态配置quartz的demo，实现任务智能化便捷化执行。本项目可直接当做前后端分离的脚手架，后续会集成shiro等一些其他的框架<br>
 如果您觉得还满意的话，别忘了关注公众号，微信搜索“豆豆的蓝胖子”，也可以在https://www.doudoucat.com/joinus.shtml 这里留言，包括你运行项目的问题，各种问题。我会一一回复你们。<br>如果觉得本项目还可以，别忘了点点star，你的每一个小小的支持，都是包子最大的动力!!!

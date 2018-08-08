@@ -12,7 +12,7 @@
 ## 二.效果截图<br>
 ![](http://source.doudoucat.com/任务组.png)
 ![](http://source.doudoucat.com/任务列表.png)
-![](http://source.doudoucat.com/quartz.png)
+![](http://source.doudoucat.com/quartz1.png)
 <br>
 ## 三.说明与结语<br>
 springboot动态配置quartz的demo，实现任务智能化便捷化执行。本项目可直接当做前后端分离的脚手架，后续会集成shiro等一些其他的框架<br>

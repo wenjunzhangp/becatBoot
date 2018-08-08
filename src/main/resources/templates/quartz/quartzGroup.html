@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<title>任务组列表</title>
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="stylesheet" href="/layui/css/layui.css" />
+	<link rel="stylesheet" href="/layui/css/quartzGroup.css" />
+</head>
+<body>
+
+<blockquote class="layui-elem-quote quoteBox">
+	<div class="layui-inline">
+		<button class="layui-btn layui-btn-normal addGroup">添加分组</button>
+	</div>
+</blockquote>
+<table id="groupList" lay-filter="groupList"></table>
+
+<!--操作按钮-->
+<script type="text/html" id="groupListBar">
+	<a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+	<a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="del">删除</a>
+	{{#  if(d.status == "0"){ }}
+		<a class="layui-btn layui-btn-xs layui-btn-warm" lay-event="usable">停止</a>
+	{{#  } else { }}
+		<a class="layui-btn layui-btn-xs layui-btn-warm" lay-event="usable">运行</a>
+	{{#  }}}
+</script>
+
+<form class="layui-form layui-row groupForm hidecustom">
+	<input type="hidden" class="idval" name="scheduleJobGroupId" value=""/>
+	<div class="layui-col-xs12">
+		<div class="layui-form-item layui-row layui-col-">
+			<labelxs10 class="layui-form-label">任务组名称</labelxs10>
+			<div class="layui-input-block">
+				<input type="text" class="layui-input scheduleJobGroupName" name="scheduleJobGroupName" lay-verify="required" placeholder="请输入任务组名称"/>
+			</div>
+		</div>
+		<div class="layui-form-item layui-row layui-col-xs10">
+			<label class="layui-form-label">详细描述</label>
+			<div class="layui-input-block">
+				<input type="text" class="layui-input scheduleJobGroupDescription" name="scheduleJobGroupDescription" lay-verify="required" placeholder="请输入任务组描述"/>
+			</div>
+		</div>
+		<div class="layui-form-item layui-row layui-col-xs10">
+			<label class="layui-form-label">状态</label>
+			<div class="layui-input-block">
+				<input type="radio" lay-filter="radioTypeId" name="status" value="0" title="启动" checked=""/>
+				<div class="layui-unselect layui-form-radio layui-form-radioed status"><i class="layui-anim layui-icon layui-anim-scaleSpring"></i><span>启动</span></div>
+				<input type="radio" checked="checked" lay-filter="radioTypeId" name="status" value="1" title="禁止"/>
+				<div class="layui-unselect layui-form-radio status"><i class="layui-anim layui-icon"></i><span>禁止</span></div>
+			</div>
+		</div>
+		<div class="layui-form-item layui-row layui-col-xs10">
+			<div class="layui-input-block">
+				<button class="layui-btn modifyQuartzGroup" lay-filter="modifyQuartzGroup">发布</button>
+				<button type="reset" class="layui-btn layui-btn-primary resetFrom">取消</button>
+			</div>
+		</div>
+	</div>
+</form>
+
+<script src="/layui/layui.js"></script>
+<script src="/quartz/quartzGroup.js"></script>
+</body>
+</html>

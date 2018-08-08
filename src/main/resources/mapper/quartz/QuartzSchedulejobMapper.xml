@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.baozi.dao.quartz.QuartzSchedulejobMapper">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="com.baozi.entity.quartz.QuartzSchedulejob">
+		<id column="schedule_job_id" property="scheduleJobId" />
+		<result column="schedule_job_name" property="scheduleJobName" />
+		<result column="schedule_job_group_id" property="scheduleJobGroupId" />
+		<result column="status" property="status" />
+		<result column="schedule_job_description" property="scheduleJobDescription" />
+		<result column="create_time" property="createTime" />
+		<result column="schedule_job_cron_expression" property="scheduleJobCronExpression" />
+		<result column="schedule_job_method" property="scheduleJobMethod" />
+		<result column="schedule_job_class" property="scheduleJobClass" />
+	</resultMap>
+
+	<resultMap id="resultSchedulejobGroupMap" type="com.baozi.entity.quartz.QuartzSchedulejob">
+		<id column="schedule_job_id" property="scheduleJobId" />
+		<result column="schedule_job_name" property="scheduleJobName" />
+		<result column="schedule_job_group_id" property="scheduleJobGroupId" />
+		<result column="status" property="status" />
+		<result column="schedule_job_description" property="scheduleJobDescription" />
+		<result column="create_time" property="createTime" />
+		<result column="schedule_job_cron_expression" property="scheduleJobCronExpression" />
+		<result column="schedule_job_method" property="scheduleJobMethod" />
+		<result column="schedule_job_class" property="scheduleJobClass" />
+		<association property="quartzSchedulejobGroup" column="schedule_job_group_id" javaType="com.baozi.entity.quartz.QuartzSchedulejobGroup" select="querySchedulejobGroupId"/>
+	</resultMap>
+
+	<resultMap id="quartzSchedulejobGroupMap" type="com.baozi.entity.quartz.QuartzSchedulejobGroup">
+		<id column="schedule_job_groupId" property="scheduleJobGroupId" />
+		<result column="schedule_job_group_name" property="scheduleJobGroupName" />
+		<result column="schedule_job_group_description" property="scheduleJobGroupDescription" />
+		<result column="status" property="status" />
+		<result column="create_time" property="createTime" />
+	</resultMap>
+
+	<!-- 查询条件 -->
+	<sql id="Example_Where_Clause">
+		WHERE 1=1
+		<trim suffixOverrides=",">
+			<if test="scheduleJobGroupId != null">
+				AND schedule_job_group_id = #{scheduleJobGroupId}
+			</if>
+			<if test="scheduleJobGroupName != null and scheduleJobGroupName != ''">
+				AND schedule_job_name like
+				CONCAT('%',#{scheduleJobGroupName},'%')
+			</if>
+			<if
+					test="scheduleJobGroupDescription != null and scheduleJobGroupDescription != ''">
+				AND schedule_job_description like
+				CONCAT('%',#{scheduleJobGroupDescription},'%')
+			</if>
+			<if test="status != null">
+				AND status = #{status}
+			</if>
+		</trim>
+	</sql>
+	<select id="querySchedulejobGroupId" parameterType="java.lang.Integer" resultMap="quartzSchedulejobGroupMap">
+		SELECT * FROM quartz_schedulejob_group
+		WHERE schedule_job_groupId = #{scheduleJobGroupId}
+	</select>
+
+	<select id="selectQuartzSchedulejobGroupId" parameterType="java.lang.Integer" resultType="com.baozi.entity.quartz.QuartzSchedulejob">
+		SELECT * FROM quartz_schedulejob
+		WHERE schedule_job_group_id = #{scheduleJobGroupId}
+	</select>
+
+	<select id="selectQuartzSchedulejobList" resultMap="resultSchedulejobGroupMap">
+		/*SELECT q.*,g.schedule_job_group_name FROM quartz_schedulejob q LEFT JOIN quartz_schedulejob_group g
+		ON q.schedule_job_group_id=g.schedule_job_groupId*/
+		SELECT * FROM quartz_schedulejob
+	</select>
+
+	<select id="selectQuartzSchedulejobAll" resultMap="resultSchedulejobGroupMap">
+		SELECT * FROM quartz_schedulejob
+	</select>
+
+	<select id="selectById" parameterType="int" resultMap="resultSchedulejobGroupMap">
+		SELECT * FROM quartz_schedulejob
+		WHERE schedule_job_id = #{scheduleJobId}
+	</select>
+
+
+
+</mapper>

@@ -1,0 +1,52 @@
+.layui-btn-small {
+    padding: 0 15px;
+}
+
+.layui-form-checkbox {
+    margin: 0;
+}
+
+tr td:not(:nth-child(0)),
+tr th:not(:nth-child(0)) {
+    text-align: center;
+}
+
+#dataConsole {
+    text-align: center;
+}
+/*分页页容量样式*/
+/*可选*/
+.layui-laypage {
+    display: block;
+}
+
+/*可选*/
+.layui-laypage > * {
+    float: left;
+}
+/*可选*/
+.layui-laypage .laypage-extend-pagesize {
+    float: right;
+}
+/*可选*/
+.layui-laypage:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+/*必须*/
+.layui-laypage .laypage-extend-pagesize {
+    height: 30px;
+    line-height: 30px;
+    margin: 0px;
+    border: none;
+    font-weight: 400;
+}
+/*分页页容量样式END*/
+
+.hidecustom{
+    display: none;
+}

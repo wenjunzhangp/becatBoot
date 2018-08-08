@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<title>任务列表</title>
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="stylesheet" href="/layui/css/layui.css" />
+	<link rel="stylesheet" href="/layui/css/quartzList.css" />
+</head>
+<body>
+
+<blockquote class="layui-elem-quote quoteBox">
+	<div class="layui-inline">
+		<button class="layui-btn layui-btn-normal addQuartz">添加定时任务</button>
+		<button class="layui-btn layui-btn-normal syncQuartz">同步定时任务</button>
+	</div>
+</blockquote>
+<table id="quartzList" lay-filter="quartzList"></table>
+
+<!--操作按钮-->
+<script type="text/html" id="quartzListBar">
+	<a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+	<a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="del">删除</a>
+	{{#  if(d.status == "0"){ }}
+	<a class="layui-btn layui-btn-xs layui-btn-warm" lay-event="usable">停止</a>
+	<a class="layui-btn layui-btn-xs layui-btn-warm" lay-event="reboot">重启</a>
+	{{#  } else { }}
+	<a class="layui-btn layui-btn-xs layui-btn-warm" lay-event="usable">运行</a>
+	{{#  }}}
+</script>
+
+<form class="layui-form layui-row quartzForm hidecustom">
+	<input type="hidden" class="idval" name="scheduleJobId" value=""/>
+	<div class="layui-col-xs11">
+		<div class="layui-form-item layui-row layui-col-xs11">
+			<label class="layui-form-label">定时器名称</label>
+			<div class="layui-input-block">
+				<input type="text" class="layui-input scheduleJobName" name="scheduleJobName" lay-verify="required" placeholder="请输入任务定时器名称"/>
+			</div>
+		</div>
+		<div class="layui-form-item layui-row layui-col-xs11">
+			<label class="layui-form-label">表达式</label>
+			<div class="layui-input-block">
+				<input type="text" class="layui-input scheduleJobCronExpression" name="scheduleJobCronExpression" lay-verify="required" placeholder="请输入任务表达式"/>
+			</div>
+		</div>
+		<div class="layui-form-item layui-row layui-col-xs11">
+			<label class="layui-form-label">执行全路径</label>
+			<div class="layui-input-block">
+				<input type="text" class="layui-input scheduleJobClass" name="scheduleJobClass" lay-verify="required" placeholder="请输入任务执行类全路径（带包名）"/>
+			</div>
+		</div>
+		<div class="layui-form-item layui-row layui-col-xs11">
+			<label class="layui-form-label">执行方法</label>
+			<div class="layui-input-block">
+				<input type="text" class="layui-input scheduleJobMethod" name="scheduleJobMethod" lay-verify="required" placeholder="请输入任务执行具体方法（该方法不能有参数）"/>
+			</div>
+		</div>
+		<div class="layui-form-item layui-row layui-col-xs11">
+			<label class="layui-form-label">分组类型</label>
+			<div class="layui-input-block">
+				<select name="scheduleJobGroupId" id="search" lay-search="" lay-filter="searchPage"></select>
+			</div>
+		</div>
+		<div class="layui-form-item layui-row layui-col-xs11">
+			<label class="layui-form-label">定时器描述</label>
+			<div class="layui-input-block">
+				<input type="text" class="layui-input scheduleJobDescription" name="scheduleJobDescription" lay-verify="required" placeholder="请输入任务定时器描述"/>
+			</div>
+		</div>
+		<div class="layui-form-item layui-row layui-col-xs11">
+			<label class="layui-form-label">状态</label>
+			<div class="layui-input-block">
+				<input type="radio" lay-filter="radioTypeId" name="status" value="0" title="启动" checked=""/>
+				<div class="layui-unselect layui-form-radio layui-form-radioed status"><i class="layui-anim layui-icon layui-anim-scaleSpring"></i><span>启动</span></div>
+				<input type="radio" checked="checked" lay-filter="radioTypeId" name="status" value="1" title="禁止"/>
+				<div class="layui-unselect layui-form-radio status"><i class="layui-anim layui-icon"></i><span>禁止</span></div>
+			</div>
+		</div>
+		<div class="layui-form-item layui-row layui-col-xs11">
+			<div class="layui-input-block">
+				<button class="layui-btn modifyQuartz" lay-filter="modifyQuartz">发布</button>
+				<button type="reset" class="layui-btn layui-btn-primary resetFrom">取消</button>
+			</div>
+		</div>
+	</div>
+</form>
+
+<script src="/layui/layui.js"></script>
+<script src="/quartz/quartzList.js"></script>
+</body>
+</html>

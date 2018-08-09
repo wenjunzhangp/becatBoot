@@ -9,6 +9,10 @@
 4.如果不想装`dubbo`、`zookeeper`、`redis`这些，可以直接将相关代码注释掉或者直接干掉，运行main入口程序启动。<br>
 5.项目遇到任何问题，启动不了的同学请联系我，我会提供相应支持。<br>
 6.如果quartz任务不执行，看看quartz所属的任务组是不是启动了！！！特别注意，必须启动任务组，quartz才能启动！！！<br>
+7.访问路径<br>
+  任务组列表:http://127.0.0.1:8080/group<br>
+  任务列表:http://127.0.0.1:8080/quartz<br>
+  swagger:http://127.0.0.1:8080/swagger-ui.html
 ## 二.效果截图<br>
 ![](http://source.doudoucat.com/任务组.png)
 ![](http://source.doudoucat.com/任务列表.png)

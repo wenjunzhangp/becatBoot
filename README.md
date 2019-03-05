@@ -1,6 +1,4 @@
 # SpringBoot实现动态配置quartz任务！！
-官网地址：https://www.doudoucat.com<br>
-微信公众号：微信搜索“becatshop”或者“豆豆的蓝胖子”,点击关注即可
 <br><br>
 ## 一.部署项目<br>
 1.请自行百度安装`idea`、`redis`、`mysql`、`dubbo`、`zookeeper`，这些是项目运行的基础支撑。<br>

@@ -193,11 +193,6 @@
 			<artifactId>xmlpull-xpp3</artifactId>
 			<version>3.0.0.20130526</version>
 		</dependency>
-		<dependency>
-			<groupId>hry.third</groupId>
-			<artifactId>QRCode</artifactId>
-			<version>3.0</version>
-		</dependency>
 	</dependencies>
 	
 	<build>

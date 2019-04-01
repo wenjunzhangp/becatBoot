@@ -193,6 +193,18 @@
 			<artifactId>xmlpull-xpp3</artifactId>
 			<version>3.0.0.20130526</version>
 		</dependency>
+		<!--阿里支付sdk包-->
+		<dependency>
+			<groupId>com.alipay.sdk</groupId>
+			<artifactId>alipay-sdk-java</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+		<!--微信支付sdk包-->
+		<dependency>
+			<groupId>com.github.wxpay</groupId>
+			<artifactId>wxpay-sdk</artifactId>
+			<version>0.0.3</version>
+		</dependency>
 	</dependencies>
 	
 	<build>

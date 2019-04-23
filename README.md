@@ -1,4 +1,4 @@
-# SpringBoot实现动态配置quartz任务！！
+# SpringBoot集成支付宝、微信支付sdk、实现动态配置quartz任务
 <br><br>
 ## 一.部署项目<br>
 1.请自行百度安装`idea`、`redis`、`mysql`、`dubbo`、`zookeeper`，这些是项目运行的基础支撑。<br>

@@ -5,7 +5,7 @@ import com.baozi.service.dubbo.IDubboService;
 import com.baozi.util.LoggerUtils;
 
 /**
- * Copyright:   互融云
+ * Copyright:   张文君
  *
  * @author: zhangwenjun
  * @version: V1.0

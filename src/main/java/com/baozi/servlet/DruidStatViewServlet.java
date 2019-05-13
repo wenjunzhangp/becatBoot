@@ -6,7 +6,7 @@ import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
 
 /**
- * Copyright:   互融云
+ * Copyright:   张文君
  * 阿里连接池servlet配置
  * @author: zhangwenjun
  * @version: V1.0

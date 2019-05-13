@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Copyright:   互融云
+ * Copyright:   张文君
  * 代码生成器演示
  * @author: zhangwenjun
  * @version: V1.0

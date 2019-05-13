@@ -3,7 +3,7 @@ package com.baozi.util;
 import java.io.Serializable;
 
 /**
- * Copyright:   西邻在线
+ * Copyright:   张文君
  * 封装json结果集
  *
  * @author: zhangwenjun

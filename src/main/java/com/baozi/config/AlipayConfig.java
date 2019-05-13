@@ -1,7 +1,7 @@
 package com.baozi.config;
 
 /**
- * Copyright:   西邻在线(北京)电子商务有限公司
+ * Copyright:   张文君
  * 支付宝支付基础配置类
  *
  * @author: zhangwenjun

@@ -5,7 +5,7 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 /**
- * Copyright:   互融云
+ * Copyright:   张文君
  *
  * @author: zhangwenjun
  * @version: V1.0

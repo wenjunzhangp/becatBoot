@@ -6,7 +6,7 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
 /**
- * Copyright:   互融云
+ * Copyright:   张文君
  *
  * @author: zhangwenjun
  * @version: V1.0

@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import springfox.documentation.annotations.ApiIgnore;
 
 /**
- * Copyright:   互融云
+ * Copyright:   张文君
  * 视图跳转controller
  * @author: zhangwenjun
  * @version: V1.0

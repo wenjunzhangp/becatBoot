@@ -7,7 +7,7 @@ import org.apache.commons.lang.StringUtils;
 import java.util.Collection;
 
 /**
- * Copyright:   互融云
+ * Copyright:   张文君
  * 业务异常工具类,语法类似junit断言语法
  * 用法: AssertUtil.notEmpty(usersId, "需重新登陆获取");
  * @author: zhangwenjun

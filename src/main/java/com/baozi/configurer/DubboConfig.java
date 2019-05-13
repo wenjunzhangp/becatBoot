@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
 /**
- * Copyright:   互融云
+ * Copyright:   张文君
  *
  * @author: zhangwenjun
  * @version: V1.0

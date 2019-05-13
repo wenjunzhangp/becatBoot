@@ -3,7 +3,7 @@ package com.baozi.util;
 import java.lang.reflect.Field;
 
 /**
- * Copyright:   互融云
+ * Copyright:   张文君
  * tostring工具类
  * 用法：return ReflectToStringUtil.toStringUtil(this,false);
  * @author: zhangwenjun

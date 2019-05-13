@@ -16,7 +16,7 @@ import java.sql.SQLException;
 
 
 /**
- * Copyright:   互融云
+ * Copyright:   张文君
  * 阿里连接池servlet配置
  * @author: zhangwenjun
  * @version: V1.0
@@ -86,15 +86,14 @@ public class DruidConfiguration {
     public DataSource druidDataSource(@Value("${spring.datasource.driver-class-name}") String driver,
                                       @Value("${spring.datasource.url}") String url,
                                       @Value("${spring.datasource.username}") String username,
-                                      @Value("${spring.datasource.password}") String password,
-                                      @Value("${spring.datasource.maxActive}") int maxActive
+                                      @Value("${spring.datasource.password}") String password
     ) {
         DruidDataSource druidDataSource = new DruidDataSource();
         druidDataSource.setDriverClassName(driver);
         druidDataSource.setUrl(url);
         druidDataSource.setUsername(username);
         druidDataSource.setPassword(password);
-        druidDataSource.setMaxActive(maxActive);
+        druidDataSource.setMaxActive(10);
         logger.info("DruidConfiguration.druidDataSource(),url="+url+",username="+username+",password="+password);
         try {
             druidDataSource.setFilters("stat, wall");

@@ -9,7 +9,7 @@ import javax.servlet.http.HttpSession;
 import java.io.File;
 
 /**
- * Copyright:   互融云
+ * Copyright:   张文君
  * 从requet中取值
  * @author: zhangwenjun
  * @version: V1.0

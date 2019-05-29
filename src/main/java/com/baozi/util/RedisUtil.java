@@ -14,7 +14,7 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Copyright:   西邻在线电子商务
+ * Copyright:   张文君
  *
  * @author: zhangwenjun
  * @version: V1.0

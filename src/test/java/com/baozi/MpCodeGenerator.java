@@ -27,7 +27,7 @@ public class MpCodeGenerator {
         AutoGenerator mpg = new AutoGenerator();
         //1.全局配置
         GlobalConfig gc = new GlobalConfig();
-        gc.setOutputDir("D:\\generatorcode");
+        gc.setOutputDir("C:\\Users\\Administrator\\Desktop");
         gc.setFileOverride(true);
         gc.setActiveRecord(true);
         //XML二级缓存
@@ -49,8 +49,8 @@ public class MpCodeGenerator {
         dsc.setDbType(DbType.MYSQL);
         dsc.setDriverName("com.mysql.jdbc.Driver");
         dsc.setUsername("root");
-        dsc.setPassword("root");
-        dsc.setUrl("jdbc:mysql://127.0.0.1:3306/test?characterEncoding=utf8");
+        dsc.setPassword("Zz971886506");
+        dsc.setUrl("jdbc:mysql://123.56.219.123:3306/test?characterEncoding=utf8");
         mpg.setDataSource(dsc);
         //3.策略配置
         StrategyConfig strategy = new StrategyConfig();

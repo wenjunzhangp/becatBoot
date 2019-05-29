@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.baozi.dao.coupon.LpzTaobaoCouponMapper">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="com.baozi.entity.coupon.LpzTaobaoCoupon">
+		<id column="id" jdbcType="VARCHAR" property="id" />
+		<result column="goodsname" jdbcType="VARCHAR" property="goodsname" />
+		<result column="goodsremark" jdbcType="VARCHAR" property="goodsremark" />
+		<result column="onlineprice" jdbcType="DECIMAL" property="onlineprice" />
+		<result column="couponprice" jdbcType="DECIMAL" property="couponprice" />
+		<result column="sellcount" jdbcType="INTEGER" property="sellcount" />
+		<result column="update" jdbcType="VARCHAR" property="update" />
+		<result column="createdate" jdbcType="TIMESTAMP" property="createdate" />
+		<result column="linkurl" jdbcType="VARCHAR" property="linkurl" />
+	</resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, goodsname, goodsremark, onlineprice, couponprice, sellcount, update, createdate, linkurl
+    </sql>
+
+	<select id="selectCouponList" parameterType="java.util.Map" resultMap="BaseResultMap">
+		SELECT * FROM lpz_taobao_coupon
+	</select>
+
+	<select id="selectLpzTaobaoCouponAll" parameterType="java.util.Map" resultMap="BaseResultMap">
+		SELECT * FROM lpz_taobao_coupon
+	</select>
+</mapper>

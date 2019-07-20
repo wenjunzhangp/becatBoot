@@ -9,9 +9,9 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://123.56.219.123:3306/test?characterEncoding=UTF-8
+    url: jdbc:mysql://127.0.0.1:3306/test?characterEncoding=UTF-8
     username: root
-    password: Zz971886506
+    password: root
     hikari:
       pool-name: HikariPool
       minimum-idle: 5
@@ -48,12 +48,12 @@ spring:
   data:
     elasticsearch:
       cluster-name: elasticsearch
-      cluster-nodes: 123.56.219.123:9200
+      cluster-nodes: 127.0.0.1:9200
       repositories:
         enabled: true
   elasticsearch:
       rest:
-        uris: 123.56.219.123:9200
+        uris: 127.0.0.1:9200
   resources:
     static-locations: classpath:/static/,classpath:/templates/
   thymeleaf:

@@ -110,7 +110,7 @@
 		<dependency>
 			<groupId>org.mybatis</groupId>
 			<artifactId>mybatis</artifactId>
-			<version>3.4.2</version>
+			<version>3.5.6</version>
 		</dependency>
 		<!-- mybatisPlus代码生成模板引擎 -->
 		<dependency>

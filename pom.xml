@@ -116,7 +116,7 @@
 		<dependency>
 			<groupId>com.baomidou</groupId>
 			<artifactId>mybatis-plus</artifactId>
-			<version>2.0.2</version>
+			<version>3.5.3.1</version>
 		</dependency>
 		<!-- mybatisPlus代码生成模板引擎 -->
 		<dependency>
